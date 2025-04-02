@@ -206,45 +206,6 @@ while running and attempts > 0:
         helper.get_desired_char_types()
         generated_password_chars = helper.generate_password_characters()
 
-        '''
-        prompt = ["Would you like to include letters? ",
-                  "Would you like to include numbers?",
-                  "would you like to include special characters?" ]
-        
-        password_character_types['letters'] = helper.characters_to_include(helper.desired_character_prompts[0])
-        if password_character_types['letters'] == False: password_character_types.pop('letters')
-
-        password_character_types['numbers'] = helper.characters_to_include(helper.desired_character_prompts[1])
-        if password_character_types['numbers'] == False: password_character_types.pop('numbers')
-
-        password_character_types['characters'] = helper.characters_to_include(helper.desired_character_prompts[2] )
-        if password_character_types['characters'] == False: password_character_types.pop('characters')
-
-        helper.long_char_type = random.choice(list(password_character_types.keys()))
-        generated_password = []
-        number_of_characters_to_generate = math.floor(desired_pass_length / len(password_character_types))
-        character_countdown = 0
-        
- 
-        for value in password_character_types:
-            if value == long_char_type:
-                character_countdown = number_of_characters_to_generate + (desired_pass_length % len(password_character_types))
-                match value:
-                    case 'letters':
-                        generated_password += helper.generate_random_letters(character_countdown)
-                    case 'numbers': 
-                        generated_password += helper.generate_random_numbers(character_countdown)
-                    case 'characters':
-                        generated_password += helper.generate_random_characters(character_countdown)
-            else:
-                match value:
-                    case 'letters':
-                        generated_password += helper.generate_random_letters(number_of_characters_to_generate)
-                    case 'numbers': 
-                        generated_password += helper.generate_random_numbers(number_of_characters_to_generate)
-                    case 'characters':
-                        generated_password += helper.generate_random_characters(number_of_characters_to_generate)
-        '''
         pass_string = helper.generate_randomized_password(random.sample(generated_password_chars, len(generated_password_chars)))
         print(f"Your password is: {pass_string}")
        
